@@ -29,7 +29,15 @@ supabase_secret = modal.Secret.from_name("supabase-credentials")  # SUPABASE_URL
 BASE_URL = "https://api.kie.ai/api/v1"
 
 
-@app.function(image=image, secrets=[kie_secret, supabase_secret], timeout=180)
+@app.function(
+    image=image,
+    secrets=[kie_secret, supabase_secret],
+    timeout=180,
+    # Scaling configuration
+    max_containers=10,        # Max 10 containers en parallèle
+    min_containers=0,         # Scale to zero quand inactif
+    buffer_containers=1,      # 1 container buffer pour éviter cold starts
+)
 @modal.fastapi_endpoint(method="POST", docs=True)
 def generate(
     prompt: str,
