@@ -1,11 +1,11 @@
-# Khepri AI Image Generation Worker
+# Kepri AI Image Generation Worker
 
 Worker Modal pour génération d'images via Kie.ai Nano Banana Pro.
 
 ## Structure du Projet
 
 ```
-khepri-kie-local-test/
+Kepri-kie-local-test/
 ├── app.py                 # Application Modal principale (FastAPI)
 ├── requirements.txt       # Dépendances Python
 ├── .env                   # Variables d'environnement (local only)
@@ -60,20 +60,20 @@ Modal va :
   - `POST /generate` - Génération d'images
 - Afficher les URLs dev :
   ```
-  https://wearekhepri--khepri-kie-image-gen-home-dev.modal.run
-  https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run
+  https://weareKepri--Kepri-kie-image-gen-home-dev.modal.run
+  https://weareKepri--Kepri-kie-image-gen-generate-dev.modal.run
   ```
 
 ### Test de l'API
 
 **Health check:**
 ```bash
-curl https://wearekhepri--khepri-kie-image-gen-home-dev.modal.run
+curl https://weareKepri--Kepri-kie-image-gen-home-dev.modal.run
 ```
 
 **Génération d'image:**
 ```bash
-curl -X POST "https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run" \
+curl -X POST "https://weareKepri--Kepri-kie-image-gen-generate-dev.modal.run" \
   -H "Content-Type: application/json" \
   -d '{
     "prompt": "studio shot of a mannequin wearing a red coat",
@@ -84,7 +84,7 @@ curl -X POST "https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run" 
 
 **Avec image en input:**
 ```bash
-curl -X POST "https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run" \
+curl -X POST "https://weareKepri--Kepri-kie-image-gen-generate-dev.modal.run" \
   -H "Content-Type: application/json" \
   -d '{
     "prompt": "replace mannequin with woman",
@@ -95,7 +95,7 @@ curl -X POST "https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run" 
 
 **Documentation Swagger:**
 ```
-https://wearekhepri--khepri-kie-image-gen-generate-dev.modal.run/docs
+https://weareKepri--Kepri-kie-image-gen-generate-dev.modal.run/docs
 ```
 
 ### Déploiement en production
@@ -106,7 +106,7 @@ modal deploy app.py
 
 Les URLs deviennent permanentes (sans `-dev`) :
 ```
-https://wearekhepri--khepri-kie-image-gen-generate.modal.run
+https://weareKepri--Kepri-kie-image-gen-generate.modal.run
 ```
 
 ## Paramètres de l'API

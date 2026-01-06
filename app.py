@@ -1,5 +1,5 @@
 """
-Khepri AI Image Generation Worker
+Kepri AI Image Generation Worker
 Phase 2: Modal deployment with FastAPI endpoint
 """
 import os
@@ -10,7 +10,7 @@ from typing import Optional, List
 import modal
 
 # Déclaration de l'application Modal
-app = modal.App("khepri-kie-image-gen")
+app = modal.App("kepri-kie-image-gen")
 
 # Définition de l'image personnalisée
 image = (
@@ -167,7 +167,7 @@ def generate(
 def home():
     """Health check endpoint"""
     return {
-        "message": "Khepri AI Image Generation API",
+        "message": "Kepri AI Image Generation API",
         "status": "running",
         "version": "2.0.0",
         "endpoints": {

@@ -18,7 +18,7 @@ SUPABASE_ANON_KEY=ta_cle_supabase
 Test direct sans interaction utilisateur.
 
 ```bash
-cd /Users/barbaramileo/Projects/khepri-kie-local-test
+cd /Users/barbaramileo/Projects/Kepri-kie-local-test
 python3 local_tests/test_direct.py
 ```
 
